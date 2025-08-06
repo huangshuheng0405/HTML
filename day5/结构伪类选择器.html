@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .ex1 li:first-child {
+        background-color: green;
+      }
+      .ex1 li:last-child {
+        background-color: red;
+      }
+      .ex1 li:nth-child(5) {
+        background-color: pink;
+      }
+      /* 括号里还可以写公式 */
+
+      /* 选择偶数 */
+      .ex2 li:nth-child(2n) {
+        background-color: pink;
+      }
+      /* 选择奇数 2n + 1 */
+
+      /* n是从0开始算 所以包含第五个 */
+      /* 找到第五个（包括）以后的标签 n + 5 */
+      /* 找第五个以前的 -n + 5 */
+    </style>
+  </head>
+  <body>
+    <ul class="ex1">
+      <li>li 1</li>
+      <li>li 2</li>
+      <li>li 3</li>
+      <li>li 4</li>
+      <li>li 5</li>
+      <li>li 6</li>
+      <li>li 7</li>
+      <li>li 8</li>
+      <li>li 9</li>
+    </ul>
+    <ul class="ex2">
+      <li>li 1</li>
+      <li>li 2</li>
+      <li>li 3</li>
+      <li>li 4</li>
+      <li>li 5</li>
+      <li>li 6</li>
+      <li>li 7</li>
+      <li>li 8</li>
+      <li>li 9</li>
+    </ul>
+  </body>
+</html>
+ 

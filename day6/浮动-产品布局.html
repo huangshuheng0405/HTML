@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      .product {
+        margin: 50px auto;
+        width: 1250px;
+        height: 628px;
+        background-color: white;
+      }
+
+      .left {
+        float: left;
+
+        width: 234px;
+        height: 628px;
+        background-color: skyblue;
+      }
+
+      .left:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px 10px grey;
+      }
+
+      .right {
+        float: right;
+
+        width: 978px;
+        height: 628px;
+        background-color: white;
+      }
+
+      .right li {
+        /* margin-top: 10px; */
+        margin-right: 14px;
+        margin-bottom: 14px;
+        margin-bottom: 27px;
+        float: left;
+        width: 234px;
+        height: 300px;
+        background-color: orange;
+      }
+
+      /* 找到第4 和 8 个li去掉右边距 */
+      .right li:nth-child(4n) {
+        margin-right: 0;
+      }
+
+      .right li:hover {
+        /* box-shadow: ; */
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px 10px grey;
+
+        color: aliceblue;
+      }
+
+      /* 如果父级的宽度不够 浮动的盒子会掉下来 */
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <div class="left"></div>
+      <div class="right">
+        <ul>
+          <li><a href="#">11</a></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

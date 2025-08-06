@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+
+    <button class="pink">button1</button>
+    <button>button2</button>
+    <button>button3</button>
+    <button>button4</button>
+    <script>
+      let bts = document.querySelectorAll("button")
+      for (let i = 0; i < bts.length; i++) {
+        bts[i].addEventListener("click", function () {
+          document.querySelector(".pink").className = ""
+          this.className = "pink"
+        })
+      }
+    </script>
+
+    <h2>订单确认</h2>
+    <table>
+      <tr>
+        <th>商品名称</th>
+        <th>商品价格</th>
+        <th>商品数量</th>
+        <th>总价</th>
+        <th>收货地址</th>
+      </tr>
+      <tr>
+        <td>小米青春版</td>
+        <td>199元</td>
+        <td>10</td>
+        <td>100</td>
+        <td>武汉</td>
+      </tr>
+    </table>
+
+    <script>
+      for (let i = 1; i < 10; i++) {
+        for (let j = 1; j <= i; j++) {
+          document.write(`<span>${i} * ${j} = ${i * j}</span>`)
+        }
+        document.write("<br/>")
+      }
+
+      // let arr = [1, 2]
+      // let len = arr.push(3)
+      // console.log(len)
+      // console.log(arr)
+
+      // len = arr.unshift(0)
+      // console.log(arr)
+      // console.log(len)
+
+      // let n = arr.pop()
+      // console.log(n)
+
+      // n = arr.shift()
+      // console.log(n)
+
+      // arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      // let newArr = arr.slice(2, 5) // 左闭右开
+      // console.log(newArr)
+      // console.log(arr)
+      // newArr = arr.splice(2, 5) // 从索引2开始删除5个元素
+      // console.log(newArr)
+      // console.log(arr)
+
+      // let arr = []
+      // for (let i = 0; i < 4; i++) {
+      //   arr.push(prompt(`请输入第${i}季度的数据：`))
+      // }
+
+      // document.write(` <div class="box">`)
+
+      // for (let i = 0; i < arr.length; i++) {
+      //   document.write(`
+      //     <div style ="height: ${arr[i]}px;">
+      //       <span>${arr[i]}</span>
+      //       <h4>${i + 1}季度</h4>
+      //     </div>
+      //     `)
+      // }
+
+      // document.write(` </div>`)
+    </script>
+
+    <p>点击按钮，调用函数</p>
+    <button onclick="myFunction('hsh','wzry')">Click this</button>
+
+    <p id="demo"></p>
+    <!-- 把函数 mul(4, 3) 的返回值（例如 12）设置为 id 为 demo 的 HTML 元素的内容。 -->
+    <script>
+      document.getElementById("demo").innerHTML = mul(4, 3)
+    </script>
+
+    <button onclick="getElementById('demo1').innerHTML=Date()">
+      现在的时间是？
+    </button>
+    <p id="demo1"></p>
+
+    <!-- 修改自身元素 -->
+    <button onclick="this.innerHTML=Date()">现在的时间是？</button><br />
+
+    <!-- 通过调用函数 -->
+    <button onclick="displayDate()">Click</button>
+    <p id="demo2"></p>
+
+    <p id="demo3"></p>
+    <!-- 转义字符 -->
+    <script>
+      var str = "It's a thing"
+      var str1 = "hello"
+      document.getElementById("demo3").innerHTML = str + "<br>" + str1
+    </script>
+
+    <h1>字符串函数</h1>
+    <p id="ex2"></p>
+    <script>
+      var s3 = "hsh"
+      s3 = s3.toUpperCase()
+      document.getElementById("ex2").innerHTML += s3
+    </script>
+
+    <h1>模板字符串</h1>
+    <p id="ex1"></p>
+    <script>
+      let tags = ["runoob", "google", "taobao"]
+      let html = ``
+      for (const x of tags) {
+        html += `<li>${x}</li>`
+      }
+      document.getElementById("ex1").innerHTML = html
+    </script>
+
+    <h1>switch语句</h1>
+    <button onclick="getDay()">点击获取今天星期几</button>
+    <p id="demo5"></p>
+    <script>
+      function getDay() {
+        var x
+        var d = new Date().getDay()
+        switch (d) {
+          case 1:
+            x = "今天是星期一"
+            break
+          case 2:
+            x = "今天是星期二"
+            break
+          case 3:
+            x = "今天是星期三"
+            break
+          case 4:
+            x = "今天是星期四"
+            break
+          case 5:
+            x = "今天是星期五"
+            break
+          case 6:
+            x = "今天是星期六"
+            break
+          case 0:
+            x = "今天是星期天"
+            break
+        }
+        document.getElementById("demo5").innerHTML = x
+      }
+    </script>
+
+    <!-- 对象 -->
+    <h1>对象的访问以及函数使用</h1>
+    <p id="demo6"></p>
+    <script>
+      var person = {
+        firstName: "Huang",
+        lastName: "shuheng",
+        id: 128,
+        fullName: function () {
+          return this.firstName + " " + this.lastName
+        },
+      }
+      document.getElementById("demo6").innerHTML = person.fullName()
+    </script>
+
+    <!-- 正则表达式 -->
+    <h1>正则表达式 search 和 replace</h1>
+    <p id="demo7">visit Microsoft</p>
+    <button onclick="change1()">replace the microsoft to Runoob</button>
+    <br />
+    <button onclick="change2()">search for position of Runoob</button>
+    <br />
+
+    <h1>throw catch finally</h1>
+    <p>input a number 5 to 10</p>
+    <input id="ex3" type="text" />
+    <button type="button" onclick="fun1()">Click</button>
+    <p id="demo8"></p>
+
+    <p id="demo10">11</p>
+
+    <!-- 使用内置验证 -->
+    <p>输入数字 如果输入的值小于100或大于300,就会报错</p>
+    <input id="id1" type="number" min="100" max="300" required />
+    <button onclick="fun2()">验证</button>
+
+    <p id="demo9"></p>
+
+    <p>输入数字 如果小于最大值就不会报错</p>
+    <input id="id2" type="number" max="100" />
+    <button onclick="fun3()">验证</button>
+
+    <p id="demo11"></p>
+
+    <h2>为json字符串创建对象</h2>
+    <p id="id3"></p>
+
+    <a href="javascript:void(0)">javascript.void(0) 什么也不会发生</a>
+
+    <p id="id4">箭头函数：</p>
+
+    <p id="id5">找最大值：</p>
+    <button type="button" onclick="fun4()">count</button>
+
+    <p id="count">计数器：</p>
+
+    <p id="id6">12</p>
+
+    <div id="main">
+      <p>dom is very useful</p>
+      <p>p1</p>
+    </div>
+
+    <!-- From Uiverse.io by kamehame-ha -->
+    <div class="coolinput">
+      <label for="input" class="text">Name:</label>
+      <input
+        type="text"
+        placeholder="Write here..."
+        name="input"
+        class="input"
+      />
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

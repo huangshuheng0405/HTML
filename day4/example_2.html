@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .banner {
+        height: 500px;
+        background-color: #f3f3f3;
+        background-image: url(../image/bk.png);
+        background-repeat: no-repeat;
+        background-position: left bottom;
+
+        /* 文字控制属性 继承给子级 */
+        text-align: right;
+        color: #333;
+      }
+      /* 用后代关系 找标签 不然所有样式都会变 */
+      .banner h2 {
+        font-size: 36px;
+        font-weight: 400;
+      }
+      
+      .banner p {
+        font-size: 20px;
+      }
+
+      .banner a {
+        /* 块级元素独占一行 无法右对齐 */
+        display: inline-block;
+        width: 125px;
+        height: 40px;
+        background-color: #f06b1f;
+
+        text-decoration: none;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+        font-size: 20px;
+      }
+      .banner a:hover {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="banner">
+      <h2>让创造产生价值</h2>
+      <p>我们希望小游戏平台可以提供无限的可能性，让每一个创作者都可以将他们的才华和创意传递给用户。</p>
+      <a href="#">我要报名</a>
+    </div>
+  </body>
+</html>

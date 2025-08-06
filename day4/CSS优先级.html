@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      color: red;
+    }
+    .box {
+      color: green;
+    }
+    #test {
+      color: orange;
+      
+    }
+    /* 优先级：通配符选择器 < 标签选择器 < 类选择器 < id选择器 < 行内选择器
+    (选中的标签范围越大 优先级越低) */
+  </style>
+</head>
+<body>
+  <div class="box" id="test" style="color: rgb(175, 44, 175)">div 标签</div>
+
+</body>
+</html>

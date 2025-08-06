@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        display: inline-block;
+        /* 行内块 */
+      }
+      .d1 {
+        background:pink;
+      }
+      .d2 {
+        background-color: red;
+      }
+      span {
+        width: 100px;
+        height: 100px;
+        display: block;
+        display: inline-block;
+        /* 块级元素 */
+      }
+      .s1 {
+        background-color: pink;
+      }
+      .s2 {
+        background-color: red;
+      }
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 块级元素 -->
+    <div class="d1">div标签</div>
+    <div class="d2">div标签</div>
+
+    <!-- 行内元素 -->
+     <!-- 一行共存多个 内容撑开尺寸 -->
+      <!-- span 加宽高不生效 -->
+     <span class="s1">span1</span>
+     <span class="s2">span2</span>
+
+     <!-- 行内块元素 -->
+      <!-- 一行共存多个 默认尺寸由内容决定  加宽高生效 -->
+      <img src="../image/e78ad82331012fc2.jpg" alt="">
+      <img src="../image/e78ad82331012fc2.jpg" alt="">
+
+      <!-- display 转换显示模式 -->
+       <!-- block 块级元素
+            inline-block 行内块
+            inline 行内 -->
+  </body>
+</html>

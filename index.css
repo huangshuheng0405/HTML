@@ -1,0 +1,146 @@
+.pink {
+  background-color: #ffc0cb;
+}
+
+h2 {
+  text-align: center;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+}
+table {
+  border-collapse: collapse;
+  height: 100px;
+  width: 50%;
+  margin: 0 auto;
+}
+th {
+  padding: 5px, 30px;
+  text-align: center;
+}
+td {
+  padding: 5px, 20px;
+  text-align: center;
+}
+
+span {
+  display: inline-block;
+  padding: 5px 10px;
+  width: 90px;
+  margin: 2px;
+  border: 1px solid pink;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px pink;
+  text-align: center;
+  color: hotpink;
+}
+
+.box {
+  display: flex;
+  width: 700px;
+  height: 300px;
+  border-left: 1px solid pink;
+  border-bottom: 1px solid pink;
+  margin: 50px auto;
+  justify-content: space-around;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.box > div {
+  display: flex;
+  width: 50px;
+  background-color: pink;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.box div span {
+  margin-top: -20px;
+}
+
+.box div h4 {
+  margin-bottom: -35px;
+  width: 70px;
+  margin-left: -10px;
+}
+
+/* button {
+  width:300px;
+  height: 100px;
+  border-radius:30px;
+  border-color: pink;
+  background-color: #fff;
+  border:4px solid pink;
+  text-align:center;
+  box-shadow:1px 1px 1px pink;
+  font-size:20px;
+} */
+
+p {
+  font-size: 30px;
+}
+
+input {
+  height: 50px;
+  width: 300px;
+}
+
+button {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(255, 105, 180, 0.2);
+}
+
+
+/* From Uiverse.io by kamehame-ha */ 
+.coolinput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
+}
+
+.coolinput label.text {
+  font-size: 0.75rem;
+  color: #818CF8;
+  font-weight: 700;
+  position: relative;
+  top: 0.5rem;
+  margin: 0 0 0 7px;
+  padding: 0 3px;
+  background: #e8e8e8;
+  width: fit-content;
+}
+
+.coolinput input[type=text].input {
+  padding: 11px 10px;
+  font-size: 0.75rem;
+  border: 2px #818CF8 solid;
+  border-radius: 5px;
+  background: #e8e8e8;
+}
+
+.coolinput input[type=text].input:focus {
+  outline: none;
+}

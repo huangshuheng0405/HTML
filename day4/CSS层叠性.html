@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 相同的属性会覆盖 后面的属性会覆盖前面的 */
+      /* 不同的属性会叠加 都会生效 */
+      div {
+        color: green;
+        font-size: 30px;
+      }
+      div {
+        color: red;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div>div标签</div>
+  </body>
+</html>
